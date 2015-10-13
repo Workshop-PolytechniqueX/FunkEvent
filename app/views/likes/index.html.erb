@@ -15,7 +15,7 @@
   <tbody>
     <% @likes.each do |like| %>
       <tr>
-        <td><%= like.id_user %></td>
+        <td><%= like.user_id %></td>
         <td><%= like.like_link_type %></td>
         <td><%= like.like_link_id %></td>
         <td><%= link_to 'Show', like %></td>
