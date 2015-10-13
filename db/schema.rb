@@ -15,8 +15,8 @@ ActiveRecord::Schema.define(version: 20151012195140) do
 
   create_table "events", force: :cascade do |t|
     t.string   "name"
-    t.integer  "id_place"
-    t.integer  "id_performer"
+    t.integer  "place_id"
+    t.integer  "performer_id"
     t.string   "description"
     t.date     "date"
     t.float    "price"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20151012195140) do
   end
 
   create_table "favorites", force: :cascade do |t|
-    t.integer  "id_user"
+    t.integer  "user_id"
     t.string   "favorite_link_type"
     t.integer  "favorite_link_id"
     t.datetime "created_at",         null: false
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20151012195140) do
   end
 
   create_table "likes", force: :cascade do |t|
-    t.integer  "id_user"
+    t.integer  "user_id"
     t.string   "like_link_type"
     t.integer  "like_link_id"
     t.datetime "created_at",     null: false
