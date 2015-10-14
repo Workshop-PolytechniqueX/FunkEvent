@@ -18,7 +18,7 @@ class LikesControllerTest < ActionController::TestCase
 
   test "should create like" do
     assert_difference('Like.count') do
-      post :create, like: { id_user: @like.id_user, like_link_id: @like.like_link_id, like_link_type: @like.like_link_type }
+      post :create, like: { user_id: @like.user_id, like_link_id: @like.like_link_id, like_link_type: @like.like_link_type }
     end
 
     assert_redirected_to like_path(assigns(:like))
@@ -35,7 +35,7 @@ class LikesControllerTest < ActionController::TestCase
   end
 
   test "should update like" do
-    patch :update, id: @like, like: { id_user: @like.id_user, like_link_id: @like.like_link_id, like_link_type: @like.like_link_type }
+    patch :update, id: @like, like: { user_id: @like.user_id, like_link_id: @like.like_link_id, like_link_type: @like.like_link_type }
     assert_redirected_to like_path(assigns(:like))
   end
 

@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  # On ajoute la méthode like dans la liste des méthodes où on set le user au début
+  before_action :set_user, only: [:show, :edit, :update, :destroy, :like]
+
+  # On saute une etape de securite si on appel LIKE en JSON
+  skip_before_action :verify_authenticity_token, only: [:like]
 
   # GET /users
   # GET /users.json
@@ -61,6 +65,23 @@ class UsersController < ApplicationController
     end
   end
 
+  # POST /users/1/like.json
+  def like
+    # On crée un nouvel objet like à partir des paramètres reçus
+    @like = Like.new(like_params)
+    # On précise que cet object Like dépend du user concerné
+    @like.user = @user
+
+    respond_to do |format|
+      if @like.save
+        format.json
+      else
+        format.json { render json: @like.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
@@ -70,5 +91,10 @@ class UsersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       params.require(:user).permit(:email, :password, :first_name, :last_name)
+    end
+
+    # On ajoute les paramètres qu'on va envoyer avec le like
+    def like_params
+      params.require(:like).permit(:like_link_type, :like_link_id)
     end
 end
