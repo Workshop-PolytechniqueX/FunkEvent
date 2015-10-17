@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'pages/home'
+
   resources :likes
   resources :favorites
   resources :images
@@ -8,6 +10,15 @@ Rails.application.routes.draw do
   resources :events
 
   post 'users/:id/like' => 'users#like'
+
+  #Regular route :
+
+
+  get '/users', :to => 'users#index'
+  get '/events', :to => 'events#index'
+  get '/performers', :to => 'performers#index'
+
+  root :to => 'pages#home'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
