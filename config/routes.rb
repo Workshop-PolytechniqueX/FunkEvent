@@ -6,12 +6,18 @@ Rails.application.routes.draw do
   resources :images
   resources :users
   resources :performers
+
   resources :places do
     collection do
       get 'nearby'
     end
   end
-  resources :events
+
+  resources :events do
+    collection do
+      get 'nearby'
+    end
+  end
 
   post 'users/:id/like' => 'users#like'
 

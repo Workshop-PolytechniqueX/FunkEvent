@@ -61,6 +61,12 @@ class EventsController < ApplicationController
     end
   end
 
+  def nearby
+    distance = params[:distance] || 1
+    @events = Event.within(distance, :units => :kms, :origin => [params[:latitude], params[:longitude]])
+  end
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_event
