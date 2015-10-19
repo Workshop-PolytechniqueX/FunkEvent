@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  get 'pages/home'
+
 
   resources :likes
   resources :favorites
   resources :images
+  resources :events
   resources :users
   resources :performers
 
@@ -13,17 +14,10 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :events do
-    collection do
-      get 'nearby'
-    end
-  end
 
   post 'users/:id/like' => 'users#like'
 
   #Regular route :
-
-
   get '/users', :to => 'users#index'
   get '/events', :to => 'events#index'
   get '/performers', :to => 'performers#index'
