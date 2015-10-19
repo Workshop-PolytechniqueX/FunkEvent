@@ -6,7 +6,11 @@ Rails.application.routes.draw do
   resources :images
   resources :users
   resources :performers
-  resources :places
+  resources :places do
+    collection do
+      get 'nearby'
+    end
+  end
   resources :events
 
   post 'users/:id/like' => 'users#like'
@@ -17,6 +21,7 @@ Rails.application.routes.draw do
   get '/users', :to => 'users#index'
   get '/events', :to => 'events#index'
   get '/performers', :to => 'performers#index'
+  get '/places', :to => 'places#index'
 
   root :to => 'pages#home'
 

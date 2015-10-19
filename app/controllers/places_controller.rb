@@ -61,6 +61,11 @@ class PlacesController < ApplicationController
     end
   end
 
+  def nearby
+    distance = params[:distance] || 1
+    @places = Place.within(distance, :units => :kms, :origin => [params[:latitude], params[:longitude]])
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_place
