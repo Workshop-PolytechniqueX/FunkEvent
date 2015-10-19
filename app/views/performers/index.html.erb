@@ -6,7 +6,7 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Type</th>
+      <th>Category</th>
       <th>Genre</th>
       <th>Description</th>
       <th>Url</th>
@@ -18,7 +18,7 @@
     <% @performers.each do |performer| %>
       <tr>
         <td><%= performer.name %></td>
-        <td><%= performer.type %></td>
+        <td><%= performer.performer_category %></td>
         <td><%= performer.genre %></td>
         <td><%= performer.description %></td>
         <td><%= performer.url %></td>
