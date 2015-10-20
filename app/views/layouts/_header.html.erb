@@ -1,0 +1,14 @@
+<div class="navbar navbar-default navbar-static-top">
+  <div class="container">
+
+    <a class="navbar-brand" href="/"> <%= image_tag("logo.png", alt: "Funkevent logo") %></a>
+    <div class="navbar-collapse collapse navbar-responsive-collapse">
+      <ul class="nav navbar-nav">
+        <li><%= link_to "Users", users_path  %></li>
+        <li><%= link_to "Events", events_path  %></li>
+        <li><%= link_to "Performers", performers_path  %></li>
+        <li><%= link_to "Places", places_path  %></li>
+      </ul>
+    </div>
+  </div>
+</div>
