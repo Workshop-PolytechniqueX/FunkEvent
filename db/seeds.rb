@@ -23,3 +23,30 @@ Place.create(
     latitude: 48.8658748,
     longitude: 2.3757088
 )
+
+Event.create(
+    name: "Soirée Jazz",
+    place_id: 1,
+    performer_id: 1,
+    description: "Soirée 100% Jazz de 19h à 23h avec des classiques de Louis Armstrong!",
+    date: DateTime.new(2015,11,29),
+    price: 0
+)
+
+Performer.create(
+    name: "Céline Dion",
+    performer_category: "Musicien",
+    genre: "Chanson francaise",
+    description: "Chanteuse canadienne devenue célèbre depuis Titanic",
+    url: "celinedion.com"
+)
+
+Performer.create(
+    name: "Adele",
+    performer_category: "Musicien",
+    genre: "Rock",
+    description: "Chanteuse de la musique du générique du film 'Skyfall' (James Bond),
+    url: "adele.com"
+)
+
+)
