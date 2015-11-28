@@ -6,6 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+# coding: utf-8
+
 Place.create(
     name: "Salle Pleyel",
     description: "Concert blabla",
@@ -45,6 +47,6 @@ Performer.create(
     name: "Adele",
     performer_category: "Musicien",
     genre: "Rock",
-    description: "Chanteuse de la musique du generique du film 'Skyfall' (James Bond)",
+    description: "Chanteuse de la musique du generique du film Skyfall (James Bond)",
     url: "adele.com"
 )
