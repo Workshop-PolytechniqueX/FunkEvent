@@ -1,3 +1,5 @@
+# ruby encoding: utf-8
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
@@ -6,7 +8,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-# coding: utf-8
 
 Place.create(
     name: "Salle Pleyel",
@@ -30,7 +31,7 @@ Event.create(
     name: "Soiree Jazz",
     place_id: 1,
     performer_id: 1,
-    description: "Soiree 100% Jazz de 19h à 23h avec des classiques de Louis Armstrong!",
+    description: "Soiree 100% Jazz de 19h Ã  23h avec des classiques de Louis Armstrong!",
     date: DateTime.new(2015,11,29),
     price: 0
 )
