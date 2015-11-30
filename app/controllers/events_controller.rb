@@ -63,7 +63,7 @@ class EventsController < ApplicationController
 
   def nearby
     distance = params[:distance] || 1
-    @events = Event.within(distance, :units => :kms, :origin => [params[:latitude], params[:longitude]])
+    @events = Event.where(place_id: Place.within(distance, :units => :kms, :origin => [params[:latitude], params[:longitude]])).where(date: Date.current..(Date.current + 1.days))
   end
 
 

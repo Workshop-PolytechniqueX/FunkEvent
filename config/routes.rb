@@ -10,7 +10,12 @@ Rails.application.routes.draw do
   resources :likes
   resources :favorites
   resources :images
-  resources :events
+  resources :events do
+    collection do
+      get 'nearby'
+    end
+  end
+
   resources :users
   resources :performers
 
