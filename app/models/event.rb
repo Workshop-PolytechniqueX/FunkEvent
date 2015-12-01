@@ -5,8 +5,8 @@ class Event < ActiveRecord::Base
 
 
   scope :cheaper_than, ->(chp) {where("price <= ?", "#{chp}") }
-  scope :category, -> (cat) { joins(:performers).where("performer_category LIKE ?", "%#{cat}%") }
-  scope :genre, -> (gnr) { joins(:performers).where("genre LIKE ?", "%#{gnr}%") }
+  scope :category, -> (cat) { joins(:performer).where("performer_category LIKE ?", "%#{cat}%") }
+  scope :genre, -> (gnr) { joins(:performer).where("genre LIKE ?", "%#{gnr}%") }
 
 
 
