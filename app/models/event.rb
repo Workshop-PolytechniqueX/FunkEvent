@@ -5,6 +5,10 @@ class Event < ActiveRecord::Base
 
 
   scope :cheaper_than, ->(chp) {where("price <= ?", "#{chp}") }
+  scope :category, -> (cat) { joins(:performers).where("performer_category == ?", cat }
+  scope :genre, -> (gnr) { joins(:performers).where("genre == ?", gnr }
+
+
 
   acts_as_mappable :through => :place
 end
