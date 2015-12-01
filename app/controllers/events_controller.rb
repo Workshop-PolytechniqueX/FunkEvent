@@ -70,7 +70,7 @@ class EventsController < ApplicationController
     distance = params[:distance] || 1
     @events = Event.where(nil)
     @events = @events.joins(:performers).merge(Performer.category(params[:cat])) if params[:cat].present?
-    @events = @events.joins(:genre).merge(Performer.genre(params[:gnr])) if (params[:gnr].present? and params[:cat]=="Singer")
+    @events = @events.joins(:performers).merge(Performer.genre(params[:gnr])) if (params[:gnr].present? and params[:cat]=="Singer")
     @events = @events.cheaper_than(params[:chp]) if params[:chp].present?
     @events = @events.where(place_id: Place.within(distance, :units => :kms, :origin => [params[:latitude], params[:longitude]]))
   end

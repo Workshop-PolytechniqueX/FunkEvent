@@ -4,6 +4,6 @@ class Performer < ActiveRecord::Base
   has_many :favorites, as: :favorite_link
   has_many :likes, as: :like_link
 
-  scope :category, -> (cat) { where category: cat }
+  scope :category, -> (cat) { where performer_category: cat }
   scope :genre, -> (gnr) { where genre: gnr }
 end
