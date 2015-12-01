@@ -26,7 +26,7 @@ Rails.application.routes.draw do
       get 'nearby'
     end
   end
-  
+
 
   post 'users/:id/like' => 'users#like'
 
