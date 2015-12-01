@@ -26,7 +26,7 @@ class UsersController < ApplicationController
     headers['Access-Control-Allow-Headers'] = 'X-Requested-With, X-Prototype-Version'
     headers['Access-Control-Max-Age'] = '1728000'
   end
-  
+
 
   # GET /users
   # GET /users.json

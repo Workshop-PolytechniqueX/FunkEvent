@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     end
   end
 
+  match 'users', to: 'users#index', via: [:options]
   resources :users
   resources :performers
 
@@ -25,7 +26,7 @@ Rails.application.routes.draw do
       get 'nearby'
     end
   end
-
+  
 
   post 'users/:id/like' => 'users#like'
 
