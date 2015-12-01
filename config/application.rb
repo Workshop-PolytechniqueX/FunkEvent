@@ -23,10 +23,14 @@ module FunkEvent
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
 
+
+=begin
     config.action_dispatch.default_headers.merge!({
         'Access-Control-Allow-Origin' => '*',
         'Access-Control-Request-Method' => '*'
     })
+=end
+
 
     config.action_dispatch.default_headers = {
         'Access-Control-Allow-Origin' => 'http://funkevent.herokuapp.com/',
