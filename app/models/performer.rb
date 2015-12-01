@@ -3,4 +3,7 @@ class Performer < ActiveRecord::Base
   has_many :images, as: :image_link
   has_many :favorites, as: :favorite_link
   has_many :likes, as: :like_link
+
+  scope :category, -> (cat) { where category: cat }
+  scope :genre, -> (gnr) { where genre: gnr }
 end

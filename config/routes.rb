@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :events do
     collection do
       get 'nearby'
+      get 'search'
     end
   end
 

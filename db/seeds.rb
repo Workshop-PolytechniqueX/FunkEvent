@@ -31,8 +31,8 @@ Event.create(
     name: "Soiree Jazz",
     place_id: 1,
     performer_id: 1,
-    description: "Soiree 100% Jazz de 19h à 23h avec des classiques de Louis Armstrong!",
-    date: DateTime.new(2015,11,29),
+    description: "Soiree Jazz de 19h à 23h avec des classiques de Louis Armstrong!",
+    date: DateTime.now,
     price: 0
 )
 

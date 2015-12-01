@@ -66,8 +66,17 @@ class EventsController < ApplicationController
     @events = Event.where(place_id: Place.within(distance, :units => :kms, :origin => [params[:latitude], params[:longitude]])).where(date: Date.current..(Date.current + 1.days))
   end
 
+  def search
+    distance = params[:distance] || 1
+    @events = Events.where(nil)
+    @events = @events.joins(:performers).merge(Performer.category(params[:cat])) if params[:cat].present?
+    @events = @events.joins(:genre).merge(Performer.genre(params[:gnr])) if (params[:gnr].present? and params[:cat]=="Singer")
+    @events = @events.cheaper_than(params[:chp]) if params[:chp].present?
+    @events = @events.where(place_id: Place.within(distance, :units => :kms, :origin => [params[:latitude], params[:longitude]]))
+  end
 
   private
+
     # Use callbacks to share common setup or constraints between actions.
     def set_event
       @event = Event.find(params[:id])
