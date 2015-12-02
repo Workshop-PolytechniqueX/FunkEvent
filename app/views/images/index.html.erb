@@ -7,7 +7,7 @@
     <tr>
       <th>Image link type</th>
       <th>Image link id</th>
-      <th>Url</th>
+      <th>Image url</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,7 +17,7 @@
       <tr>
         <td><%= image.image_link_type %></td>
         <td><%= image.image_link_id %></td>
-        <td><%= image.url %></td>
+        <td><%= image.url_image %></td>
         <td><%= link_to 'Show', image %></td>
         <td><%= link_to 'Edit', edit_image_path(image) %></td>
         <td><%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
