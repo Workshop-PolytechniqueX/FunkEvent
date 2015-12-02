@@ -9,7 +9,11 @@ Rails.application.routes.draw do
 
   resources :likes
   resources :favorites
-  resources :images
+  resources :images do
+    collection do
+      get 'getpic'
+    end
+  end
   resources :events do
     collection do
       get 'nearby'

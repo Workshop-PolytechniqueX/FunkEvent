@@ -61,6 +61,12 @@ class ImagesController < ApplicationController
     end
   end
 
+  def getpic
+    @images = Image.where(nil)
+    @images = @images.where(image_link_type: params[:imtype]) if params[:imtype].present?
+    @images = @images.where(image_link_id: params[:imid]) if params[:imid].present?
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_image
