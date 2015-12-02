@@ -9,7 +9,7 @@
       <th>Category</th>
       <th>Genre</th>
       <th>Description</th>
-      <th>Url</th>
+      <th>Website</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -21,7 +21,7 @@
         <td><%= performer.performer_category %></td>
         <td><%= performer.genre %></td>
         <td><%= performer.description %></td>
-        <td><%= performer.url %></td>
+        <td><%= performer.url_performer %></td>
         <td><%= link_to 'Show', performer %></td>
         <td><%= link_to 'Edit', edit_performer_path(performer) %></td>
         <td><%= link_to 'Destroy', performer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
