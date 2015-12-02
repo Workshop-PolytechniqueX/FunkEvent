@@ -5,6 +5,8 @@ class UsersController < ApplicationController
   # On saute une etape de securite si on appel LIKE en JSON
   skip_before_action :verify_authenticity_token, only: [:like]
 
+
+  ####ENABLE CORS
   skip_before_filter :verify_authenticity_token
   before_filter :cors_preflight_check
   after_filter :cors_set_access_control_headers
@@ -26,6 +28,7 @@ class UsersController < ApplicationController
     headers['Access-Control-Allow-Headers'] = 'X-Requested-With, X-Prototype-Version'
     headers['Access-Control-Max-Age'] = '1728000'
   end
+  ####ENABLE CORS
 
 
   # GET /users
