@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151202204256) do
+ActiveRecord::Schema.define(version: 20151202211542) do
 
   create_table "events", force: :cascade do |t|
     t.string   "name"
@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(version: 20151202204256) do
     t.string   "performer_category"
     t.string   "genre"
     t.string   "description"
-    t.string   "url"
+    t.string   "url_performer"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
   end
@@ -67,6 +67,8 @@ ActiveRecord::Schema.define(version: 20151202204256) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.string   "name"
+    t.string   "url_place"
+    t.string   "adress"
   end
 
   create_table "users", force: :cascade do |t|

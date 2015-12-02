@@ -10,6 +10,7 @@
       <th>Longitude</th>
       <th>Description</th>
       <th>Website</th>
+      <th>Address</th>
       <th>Capacity</th>
       <th colspan="3"></th>
     </tr>
@@ -22,7 +23,8 @@
         <td><%= place.latitude %></td>
         <td><%= place.longitude %></td>
         <td><%= place.description %></td>
-        <td><%= place.website %></td>
+        <td><%= place.url_place %></td>
+        <td><%= place.adress %></td>
         <td><%= place.capacity %></td>
         <td><%= link_to 'Show', place %></td>
         <td><%= link_to 'Edit', edit_place_path(place) %></td>
