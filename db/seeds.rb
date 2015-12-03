@@ -45,7 +45,7 @@ Image.create(
 
 Performer.create(
     id: 1,
-    name: "Abraxxas",
+    name: "Abraxas",
     performer_category: "Musician",
     genre: "Rock",
     description: "Abraxas est un groupe de ProtoDancepop/Newwave Parisien. http://www.deezer.com/album/9722016
@@ -76,7 +76,8 @@ Place.create(
     capacity: 100,
     url_place: "http://www.planeteparis.fr/Bar-Le-pompon.html",
     latitude: 48.873815,
-    longitude: 2.350067
+    longitude: 2.350067,
+    adress: "39 Rue des Petites Écuries, 75010 Paris"
 )
 
 Place.create(
@@ -86,7 +87,8 @@ Place.create(
     capacity: 100,
     url_place: "https://www.facebook.com/Le-Cinquante-195059667184887/",
     latitude: 48.871865,
-    longitude: 2.362469
+    longitude: 2.362469,
+    adress: "50 Rue de Lancry, 75010 Paris"
 )
 
 Place.create(
@@ -96,7 +98,8 @@ Place.create(
     capacity: 100,
     url_place: "https://www.facebook.com/JamesHetfeeldsPub",
     latitude: 48.870864,
-    longitude: 2.345522
+    longitude: 2.345522,
+    adress: "	17 Boulevard Poissonnière, 75002 Paris"
 )
 
 Image.create(
@@ -118,4 +121,85 @@ Image.create(
 image_link_id: 5,
     url_image: "http://www.lesgrandsboulevards.fr/img/enseignes/WEB_029711-05-13.jpg"
 
+)
+
+Like.create(
+        user_id: 1,
+        like_link_type: "place",
+        like_link_id: 1
+)
+
+
+Like.create(
+    user_id: 1,
+    like_link_type: "place",
+    like_link_id: 2
+)
+
+
+Like.create(
+        user_id: 2,
+        like_link_type: "performer",
+        like_link_id: 1
+)
+
+User.create(
+        first_name: "Barack",
+        last_name: "Obama",
+        email: "barack@obama.com",
+        password: "barackobama"
+)
+
+Performer.create(
+    id: 2,
+    name: "Sax Machine",
+    performer_category: "Musician",
+    genre: "Pop",
+    description: "Trio Jazz Hip-hop,
+    Sax Machine est un retour vers le futur de la « Great Black Music » : Hard-Bop, Afro-Beat,
+    Funk ou Hip-Hop viennent se collisionner pour former un alliage inédit et imparable !.",
+    url_performer: "http://www.saxmachine.biz/"
+)
+
+
+Performer.create(
+    id: 3,
+    name: "Prigal",
+    performer_category: "Musician",
+    genre: "Soul",
+    description: "Un grain de voix incomparable , une guitare qui nous transporte , des titres sensuels , bluesy et ... C'est l'effet PRIGAL",
+    url_performer: "http://www.patrigal.com/"
+)
+
+
+Performer.create(
+    id: 4,
+    name: "PHONOCLUB",
+    performer_category: "Musician",
+    genre: "Rock",
+    description: "PHONOCLUB est un groupe de rock independant originaire de Rennes, Bretagne (France).
+Influencé de plusieurs mouvements rock des années 80 et 90, entre le post punk, le post rock et la pop,
+PHONOCLUB fait vivre par ses quatre membres une musique originale et singulière. Soutenu par une puissante base rythmique,
+servit par une voix profonde aux textes intimes et socialement provocateur, PHONOCLUB développe des mélodies aériennes accompagnées
+de riffs acérés pouvant nous rappeler une certaine époque psychédélique.",
+    url_performer: "https://phonoclub.bandcamp.com/"
+)
+
+Image.create(
+    image_link_type: "performer",
+    image_link_id: 2,
+    url_image: "http://www.saxmachine.biz/wp-content/uploads/2010/11/Sax-Machine-feat.-RacecaR-5-520-520x346.jpg"
+)
+
+
+Image.create(
+    image_link_type: "performer",
+    image_link_id: 3,
+    url_image: "http://www.francodiff.org/nobody/artiste/000044/004433/photo_2.jpg"
+)
+
+Image.create(
+    image_link_type: "performer",
+    image_link_id: 4,
+    url_image: "http://4.bp.blogspot.com/-qNgehS0ixVQ/Ve3_jEts4QI/AAAAAAAAAyM/1PZn8Vp4SaI/s1600-r/Phonoclub.jpg"
 )
