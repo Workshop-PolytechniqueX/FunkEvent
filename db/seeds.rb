@@ -7,6 +7,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
 Event.create(
     id: 2,
     name: "Soiree old school au cinquante",
@@ -26,6 +27,80 @@ Event.create(
    surprises mais egalement de nombreux stand up amateurs !",
     date: DateTime.new(2015, 12, 3),
     price: 5
+)
+
+Event.create(
+    id: 4,
+    name: "Joute d'Improvisation au Comedy Club",
+    place_id: 2,
+    performer_id: 2,
+    description: "Au Comedy Club, place à l'improvisation ce vendredi pour une soirée qui s'annonce folle ! Sax Machine nous offrira un autre de ses talents
+    à l'occasion de cette soirée-retour parce qu'il nous aime bien.",
+    date: DateTime.new(2015, 12, 4),
+    price: 4
+)
+
+Event.create(
+    id: 5,
+    name: "As the Rolling Stones would rock",
+    place_id: 1,
+    performer_id: 5,
+    description: "Concert gratuit, les Stones arriveront probablement ivres sur scène pour se rappeler le bon temps de leur début.
+    Réservation obligatoire, on vous conseille de prendre vos places illico-presto !",
+    date: DateTime.new(2015, 12, 5),
+    price: 0
+)
+
+Event.create(
+    id: 6,
+    name: "Welcome to our Garage",
+    place_id: 1,
+    performer_id: 6,
+    description: "Vous connaissez notre petit salle cosy proprette. Ce samedi on met tout par terre avec le groupe Garage Band, qui
+    nous prépare sa pop dévastatrice et va faire chauffer les lampes de leurs amplis.",
+    date: DateTime.new(2015, 12, 5),
+    price: 7
+)
+
+Event.create(
+    id: 8,
+    name: "Celtic's secrets",
+    place_id: 3,
+    performer_id: 7,
+    description: "Ce soir notre pub se fait creuset de cultures ancestrales et alternatives pour accueillir les brilliants mais non
+    pas moins farfelus Lutins Celtiques. Après le traditionnel lancer de Lutins se tiendra une descente d'arc-en-ciel.",
+    date: DateTime.new(2015, 12, 7),
+    price: 5
+)
+
+Event.create(
+    id: 9,
+    name: "Celtic Cuisine",
+    place_id: 5,
+    performer_id: 7,
+    description: "Cours de cuisine celtique tout en magie assuré par les fantastiques Lutins Celtiques.",
+    date: DateTime.new(2015, 12, 9),
+    price: 6
+)
+
+Event.create(
+    id: 10,
+    name: "Guitars & Mechanics",
+    place_id: 3,
+    performer_id: 6,
+    description: "Guitares larsen & clé de 12 pour un pot les mains dans le cambouis dans une ambiance mixte.",
+    date: DateTime.new(2015, 12, 11),
+    price: 2
+)
+
+Event.create(
+    id: 11,
+    name: "Stony 50s",
+    place_id: 4,
+    performer_id: 5,
+    description: "Les Stones veulent se souvenir de leurs jeunes années de cinquantenaires maintenant qu'ils sont des vieux tas de rock. Peu de places, tarif VIP",
+    date: DateTime.new(2015, 12, 2),
+    price: 200
 )
 
 Place.create(
@@ -73,19 +148,19 @@ Performer.create(
 )
 
 Image.create(
-         image_link_type: "performer",
-         image_link_id: 1,
-         url_image: "https://scontent-cdg2-1.xx.fbcdn.net/hphotos-ash2/v/l/t1.0-9/10414886_611325479000879_2453807591642275189_n.jpg?oh=dbf3069ee3bef259ffef2c5d03eafb06&oe=56E022C2"
+    image_link_type: "performer",
+    image_link_id: 1,
+    url_image: "https://scontent-cdg2-1.xx.fbcdn.net/hphotos-ash2/v/l/t1.0-9/10414886_611325479000879_2453807591642275189_n.jpg?oh=dbf3069ee3bef259ffef2c5d03eafb06&oe=56E022C2"
 )
 
 Event.create(
-   id: 1,
-   name: "Soiree Rock de folie au New Morning",
-   place_id: 1,
-   performer_id: 1,
-   description: "Le jeune groupe de rock etudiant Abraxas va venir enflammer la scene pour une soiree qui va surement rester dans les annales!",
-   date: DateTime.new(2015, 12, 3),
-   price: 5
+    id: 1,
+    name: "Soiree Rock de folie au New Morning",
+    place_id: 1,
+    performer_id: 1,
+    description: "Le jeune groupe de rock etudiant Abraxas va venir enflammer la scene pour une soiree qui va surement rester dans les annales!",
+    date: DateTime.new(2015, 12, 3),
+    price: 5
 )
 
 Place.create(
@@ -123,29 +198,29 @@ Place.create(
 
 Image.create(
     image_link_type: "place",
-image_link_id: 3,
+    image_link_id: 3,
     url_image: "http://static1.villaschweppes.com/articles/4/73/4/@/2477-le-bar-du-pompon-1230x680-1.jpg"
 
 )
 
 Image.create(
     image_link_type: "place",
-image_link_id: 4,
+    image_link_id: 4,
     url_image: "http://s3-media1.fl.yelpcdn.com/bphoto/MQ7FBY8HOhQ3iqGOA-ptyQ/o.jpg"
 
 )
 
 Image.create(
     image_link_type: "place",
-image_link_id: 5,
+    image_link_id: 5,
     url_image: "http://www.lesgrandsboulevards.fr/img/enseignes/WEB_029711-05-13.jpg"
 
 )
 
 Like.create(
-        user_id: 1,
-        like_link_type: "place",
-        like_link_id: 1
+    user_id: 1,
+    like_link_type: "place",
+    like_link_id: 1
 )
 
 
@@ -157,16 +232,16 @@ Like.create(
 
 
 Like.create(
-        user_id: 2,
-        like_link_type: "performer",
-        like_link_id: 1
+    user_id: 2,
+    like_link_type: "performer",
+    like_link_id: 1
 )
 
 User.create(
-        first_name: "Barack",
-        last_name: "Obama",
-        email: "barack@obama.com",
-        password: "barackobama"
+    first_name: "Barack",
+    last_name: "Obama",
+    email: "barack@obama.com",
+    password: "barackobama"
 )
 
 Performer.create(
@@ -203,6 +278,36 @@ servit par une voix profonde aux textes intimes et socialement provocateur, PHON
 de riffs acérés pouvant nous rappeler une certaine époque psychédélique.",
     url_performer: "https://phonoclub.bandcamp.com/"
 )
+
+Performer.create(
+    id: 5,
+    name: "Rolling Stones",
+    performer_category: "Musician",
+    genre: "Rock",
+    description: "Les Rolling Stones sont un petit groupe champêtre émergent d'heptagénaires endiablés.
+    Ils se prétendent les héritiers du Grand et Vrai Rock'n'Roll, et refusent de répondre lorsqu'on leur demandent s'ils s'inspirents des Beatles",
+    url_performer: "http://www.rollingstones.com/"
+)
+
+Performer.create(
+    id: 6,
+    name: "Garage Band",
+    performer_category: "Musician",
+    genre: "Pop",
+    description: "De la pop un peu mélo mais qui ferait pleurer même les propriétaires de Hummer",
+    url_performer: "http://www.apple.com/fr/ios/garageband/"
+)
+
+Performer.create(
+    id: 7,
+    name: "Les Lutins Celtiques",
+    performer_category: "Magician",
+    genre: "",
+    description: "Les Lutins Celtiques élaborent leurs tours de magie à partir des mythes d'Irlande profonde. Leur performance la plus remarquable fut
+    l'apparition d'un chaudron plein d'oseille au pied d'un arc-en-ciel",
+    url_performer: "http://www.escapadesceltiques.com/"
+)
+
 
 Image.create(
     image_link_type: "performer",
