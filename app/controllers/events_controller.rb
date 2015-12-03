@@ -70,10 +70,10 @@ class EventsController < ApplicationController
     distance = params[:distance] || 1
     @events = Event.where(nil)
     @events = @events.categoryE(params[:cat]) if params[:cat].present?
-    @events = @events.genreE(params[:gnr]) if (params[:gnr].present? and params[:cat]=="Singer")
+    @events = @events.genreE(params[:gnr]) if (params[:gnr].present? and params[:cat]=="Musician")
     @events = @events.cheaper_than(params[:chp]) if params[:chp].present?
     @events = @events.where(place_id: Place.within(distance, :units => :kms, :origin => [params[:latitude], params[:longitude]])) if (params[:distance].present? and params[:latitude].present? and params[:longitude].present?)
-    @events = @events.where(date: params[:date]) if params[:date].present?
+    @events = @events.where(date: params[:date]..(params[:date] + 1.days)) if params[:date].present?
   end
 
   private
