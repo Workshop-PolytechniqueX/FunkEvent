@@ -7,8 +7,9 @@ gem "twitter-bootstrap-rails"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 
-# CSRF protection disabler
+# CSRF protection disabler + RACK CORS
 gem 'angular_rails_csrf'
+gem 'rack-cors', '~> 0.3.1'
 
 group :production do
   gem 'pg'

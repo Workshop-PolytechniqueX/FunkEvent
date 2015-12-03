@@ -7,7 +7,26 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Event.create(
+    id: 2,
+    name: "Soiree old school au cinquante",
+    place_id: 4,
+    performer_id: 3,
+    description: "Prigal va venir enflammer le bar le cinquante avec son rock endiable pour une soiree qui devrait durer tard dans la nuit!",
+    date: DateTime.new(2015, 12, 3),
+    price: 2
+)
 
+Event.create(
+    id: 3,
+    name: "Hip hop et stand up au Comedy Club",
+    place_id: 2,
+    performer_id: 2,
+    description: "Soiree exceptionnelle ce jeudi au Comedy Club avec la venue du trio Sax Machin qui vont faire le show accompagnes par d'autres artistes
+   surprises mais egalement de nombreux stand up amateurs !",
+    date: DateTime.new(2015, 12, 3),
+    price: 5
+)
 
 Place.create(
     id: 1,

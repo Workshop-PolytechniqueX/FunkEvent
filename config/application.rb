@@ -30,12 +30,16 @@ module FunkEvent
         'Access-Control-Request-Method' => '*'
     })
 =end
-
+    config.middleware.insert_before 0, "Rack::Cors" do
+      allow do
+        origins '*'
+        resource '*', :headers => :any, :methods => [:get, :post, :options]
+      end
+    end
 
     config.action_dispatch.default_headers = {
         'Access-Control-Allow-Origin' => 'http://funkevent.herokuapp.com/',
         'Access-Control-Request-Method' => 'POST, PUT, DELETE, GET, OPTIONS',
-        'Access-Control-Request-Method' => '*',
         'Access-Control-Allow-Headers' => 'Origin, X-Requested-With, Content-Type, Accept, Authorization'
     }
 
